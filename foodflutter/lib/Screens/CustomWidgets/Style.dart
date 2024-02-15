@@ -35,3 +35,11 @@ TextStyle textNunito300(double tamanho) {
 TextStyle textNunitoBold(double tamanho) {
   return GoogleFonts.nunitoSans(fontSize: tamanho, fontWeight: FontWeight.w700);
 }
+
+TextStyle textNunitoWhiteBold(double tamanho) {
+  return GoogleFonts.nunitoSans(
+    color: Colors.white,
+    fontSize: tamanho,
+    fontWeight: FontWeight.bold,
+  );
+}
