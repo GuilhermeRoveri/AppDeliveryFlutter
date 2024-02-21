@@ -33,9 +33,9 @@ class _TelaInicioState extends State<TelaInicio> {
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
-                card(190, 80, Color.fromARGB(255, 209, 203, 203), "Restaurantes",
-                    'assets/sopas.png'),
-                card(190, 80, Color.fromARGB(255, 209, 203, 203), "Mercado",
+                card(190, 90, Color.fromARGB(255, 209, 203, 203),
+                    "Restaurantes", 'assets/sopas.png'),
+                card(190, 90, Color.fromARGB(255, 209, 203, 203), "Mercado",
                     'assets/mercado.png'),
               ],
             ),
@@ -44,11 +44,14 @@ class _TelaInicioState extends State<TelaInicio> {
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
-                cardDois(100, 100, Colors.deepPurple, "Farmácia","assets/farmacia.png"),
-                cardDois(100, 100, Colors.deepPurple, "Bebidas", "assets/bebidas.png"),
-                
-                cardDois(100, 100, Colors.deepPurple, "Sucos", "assets/sucos.png"),
-                cardDois(100, 100, Colors.deepPurple, "Pizza", "assets/pizza.png")
+                cardDois(90, 110, Colors.deepPurple, "Farmácia",
+                    "assets/farmacia.png"),
+                cardDois(90, 110, Colors.deepPurple, "Bebidas",
+                    "assets/bebidas.png"),
+                cardDois(
+                    90, 110, Colors.deepPurple, "Sucos", "assets/sucos.png"),
+                cardDois(
+                    90, 110, Colors.deepPurple, "Pizza", "assets/pizza.png")
               ],
             ),
           ),

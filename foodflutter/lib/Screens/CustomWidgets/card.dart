@@ -18,7 +18,7 @@ Widget card(double largura, double altura, Color color, String texto, String img
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text(texto, style: textNunitoWhiteBold(16)),
+            child: Text(texto, style: textNunitoBold(14)),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -48,11 +48,11 @@ Container cardDois(double largura, double altura, Color? color, String texto, St
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text(texto, style: textNunito300(14)),
+            child: Text(texto, style: textNunitoWhiteBold(14)),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Image.asset(img, width: 32, height: 32),
+            child: Image.asset(img, width: 45, height: 45),
           ),
         ],
       ),
