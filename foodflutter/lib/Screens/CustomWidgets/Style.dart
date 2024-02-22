@@ -43,3 +43,11 @@ TextStyle textNunitoWhiteBold(double tamanho) {
     fontWeight: FontWeight.bold,
   );
 }
+
+TextStyle textNunitoVerde(double tamanho) {
+  return GoogleFonts.nunitoSans(
+    color: Colors.green,
+    fontSize: tamanho,
+    fontWeight: FontWeight.bold,
+  );
+}

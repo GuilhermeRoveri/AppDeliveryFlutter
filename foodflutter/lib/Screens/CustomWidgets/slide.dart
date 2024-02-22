@@ -11,8 +11,8 @@ class Slide extends StatefulWidget {
 
 class _SlideState extends State<Slide> {
   PageController pageController = PageController();
-  List<double> progresso = [0.0, 0.0, 0.0];
-  int qtdPaginas = 3;
+  List<double> progresso = [0.0, 0.0, 0.0, 0.0];
+  int qtdPaginas = 4;
   int paginaAtual = 0;
 
   //Método que é chamado antes da página ser constrúida
@@ -24,21 +24,24 @@ class _SlideState extends State<Slide> {
   }
 
   nextPage() {
-    Timer.periodic(Duration(seconds: 3), (timer) {
-      int page = pageController.page!.round();
-      setState(() {
-        paginaAtual = page;
-      });
+    Timer.periodic(const Duration(seconds: 3), (timer) {
+      //variavel para comparar com a quantidade de paginas
+      int proximaPagina = paginaAtual + 1;
 
-      pageController.nextPage(
-          duration: Duration(seconds: 2), curve: Curves.linear);
-      if (page >= 3) {
-        pageController.animateToPage(0,
-            duration: Duration(seconds: 2), curve: Curves.easeInCirc);
-      } else {
-        pageController.nextPage(
-            duration: const Duration(seconds: 2), curve: Curves.linear);
+      if (proximaPagina >= qtdPaginas) {
+        //qnd a variavel for = a quantidade de paginas, reseta as paginas
+        proximaPagina = 0;
       }
+
+      pageController
+          .animateToPage(proximaPagina,
+              duration: Duration(milliseconds: 300), curve: Curves.linear)
+          .then((_) {
+        setState(() {
+          paginaAtual = proximaPagina;
+          reset();
+        });
+      });
     });
   }
 
@@ -98,7 +101,7 @@ class _SlideState extends State<Slide> {
             Container(
               width: double.infinity,
               height: 200,
-              color: Colors.blue,
+              color: Colors.black,
             ),
             Container(
               width: double.infinity,
@@ -110,7 +113,19 @@ class _SlideState extends State<Slide> {
               height: 200,
               color: Colors.green,
             ),
+             Container(
+              width: double.infinity,
+              height: 200,
+              color: Colors.white,
+            ),
           ]),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: buildIndicator(),
+            ),
+          )
         ],
       ),
     );

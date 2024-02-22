@@ -41,7 +41,7 @@ class TelaBusca extends StatelessWidget {
                 card(185, 80, Colors.deepOrange, 'Espetinhos', 'assets/carnes.png'),
                 card(185, 80, Colors.cyan, 'Hot-Dog', 'assets/hotDog.png'),
                 card(185, 80, Colors.blueGrey, 'Marmitas', 'assets/marmita.png'),
-                card(185, 80, Colors.black, 'Sucos', 'assets/sucos.png'),
+                card(185, 80, Colors.pink, 'Sucos', 'assets/sucos.png'),
               ],
             )
           ],

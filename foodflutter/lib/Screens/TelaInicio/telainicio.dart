@@ -56,8 +56,26 @@ class _TelaInicioState extends State<TelaInicio> {
             ),
           ),
           const Slide(),
+
+          SizedBox(
+        height:250,
+        child:ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          cardTres(120, 80, Colors.black, 'assets/cafe.png', 'Café', 'Precinho', '50 minutos'),
+          cardTres(120, 80, Colors.black, 'assets/cafe.png', 'Café', 'Precinho', '50 minutos'),
+          cardTres(120, 80, Colors.black, 'assets/cafe.png', 'Café', 'Precinho', '50 minutos'),
+          cardTres(120, 80, Colors.black, 'assets/cafe.png', 'Café', 'Precinho', '50 minutos'),
+          cardTres(120, 80, Colors.black, 'assets/cafe.png', 'Café', 'Precinho', '50 minutos'),
         ],
       ),
+      )
+        ],
+  
+
+      ),
+    
+    
     );
   }
 }
