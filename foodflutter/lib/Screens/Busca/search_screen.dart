@@ -27,6 +27,7 @@ class TelaBusca extends StatelessWidget {
               child: Text('Categorias', style: textNunitoBold(16)),
             ),
             Wrap(
+              alignment: WrapAlignment.center,
               children: [
                 card(185, 80, Colors.red, 'Mercado', 'assets/mercado.png'),
                 card(185, 80, Colors.orange, 'Farmácia', 'assets/farmacia.png'),
@@ -42,6 +43,8 @@ class TelaBusca extends StatelessWidget {
                 card(185, 80, Colors.cyan, 'Hot-Dog', 'assets/hotDog.png'),
                 card(185, 80, Colors.blueGrey, 'Marmitas', 'assets/marmita.png'),
                 card(185, 80, Colors.pink, 'Sucos', 'assets/sucos.png'),
+                card(185, 80, Colors.brown, 'Japonês', 'assets/sushi.png'),
+                card(185, 80, const Color.fromARGB(255, 82, 63, 70), 'Salgados', 'assets/salgados.png'),
               ],
             )
           ],

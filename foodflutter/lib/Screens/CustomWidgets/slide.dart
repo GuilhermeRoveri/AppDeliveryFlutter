@@ -35,7 +35,7 @@ class _SlideState extends State<Slide> {
 
       pageController
           .animateToPage(proximaPagina,
-              duration: Duration(milliseconds: 300), curve: Curves.linear)
+              duration: const Duration(milliseconds: 300), curve: Curves.linear)
           .then((_) {
         setState(() {
           paginaAtual = proximaPagina;
@@ -47,7 +47,7 @@ class _SlideState extends State<Slide> {
 
   //iniciar o progresso
   void iniciarProgresso() {
-    Timer.periodic(Duration(milliseconds: 50), (timer) {
+    Timer.periodic(const Duration(milliseconds: 50), (timer) {
       setState(() {
         if (progresso[paginaAtual] < 1) {
           progresso[paginaAtual] += 0.02;
@@ -98,25 +98,37 @@ class _SlideState extends State<Slide> {
         alignment: AlignmentDirectional.bottomCenter,
         children: [
           PageView(controller: pageController, children: [
-            Container(
-              width: double.infinity,
-              height: 200,
-              color: Colors.black,
+            SizedBox(
+               width: double.infinity,
+            height: 200,
+            child: Image.asset(
+            'assets/pizza.gif',
+              fit: BoxFit.cover, 
+            )
             ),
-            Container(
-              width: double.infinity,
-              height: 200,
-              color: Colors.red,
+            SizedBox(
+               width: double.infinity,
+            height: 200,
+            child: Image.asset(
+            'assets/sanduiche.gif',
+              fit: BoxFit.cover, 
+            )
             ),
-            Container(
-              width: double.infinity,
-              height: 200,
-              color: Colors.green,
+            SizedBox(
+                 width: double.infinity,
+            height: 200,
+            child: Image.asset(
+            'assets/carne.gif',
+              fit: BoxFit.cover, 
+            )
             ),
-             Container(
-              width: double.infinity,
-              height: 200,
-              color: Colors.white,
+             SizedBox(
+                 width: double.infinity,
+            height: 200,
+            child: Image.asset(
+            'assets/massa.gif',
+              fit: BoxFit.cover, 
+            )
             ),
           ]),
           Padding(
