@@ -7,20 +7,26 @@ class Pedidos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Pedidos'),
-        ),
-        body: SizedBox(
-          height: 250,
-          child: ListView(scrollDirection: Axis.horizontal, 
-          children: [
-            Padding(padding: const EdgeInsets.all(8.0), 
-            child: Wrap(
-              children: [
-                
-              ],
-              ))
-          ]),
-        ));
+      appBar: AppBar(
+        title: Text('Pedidos'),
+        centerTitle: true,
+      ),
+      body: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Text('Histórico'),
+              ),
+              Text('Qui, 11 de janeiro 2024'),
+              cardPedido(400, 200, 'assets/acai.png', 'Açaí do Nicão',
+                  'Açaí de Kit Kat com Nutella e Leite Ninho', '0262'),
+            ],
+          )
+        ],
+      ),
+    );
   }
 }

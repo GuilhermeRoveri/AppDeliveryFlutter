@@ -88,7 +88,7 @@ class _TelaInicioState extends State<TelaInicio> {
                           180,
                           220,
                           'assets/lanchegorgonzola.jpg',
-                          'Lanche Queijo',
+                          'Lanche de Queijo',
                           'RS 50,00',
                           '43-60 minutos',
                           const Color.fromARGB(255, 245, 240, 240)),
@@ -260,10 +260,60 @@ class _TelaInicioState extends State<TelaInicio> {
                   )
                 ],
               ),
-            ]),
+              
+            ]
+            ),
+            
           ),
+           Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: const Text('Pedidos Populares'),
+          ),
+          SizedBox(
+            height: 250,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Wrap(
+                    children: [
+                      cardTres(
+                          180,
+                          220,
+                          'assets/pastel.jpeg',
+                          'Pastel Cremoso',
+                          'RS 20,00',
+                          '30-45 minutos',
+                          Color.fromARGB(255, 245, 240, 240)),
+                      cardTres(
+                          180,
+                          220,
+                          'assets/hotdog.jpg',
+                          'Cachorro Quente de Oz',
+                          'RS 12,00',
+                          '15-25 minutos',
+                          const Color.fromARGB(255, 245, 240, 240)),
+                      cardTres(
+                          180,
+                          220,
+                          'assets/acaicompleto.jpg',
+                          'Açaí com Chocolate e Ninho',
+                          'RS 25,00',
+                          '25-40 minutos',
+                          const Color.fromARGB(255, 245, 240, 240)),
+                    ],
+                  ),
+                )
+              ],
+            ),
+            
+          ),
+          
         ],
+        
       ),
+      
     );
   }
 }
